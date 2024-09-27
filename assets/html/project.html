@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/projets.css">
+    <title>Project Grid</title>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-title">Portfolio Web</div>
+        <div class="nav-image">
+            <img src="https://cdn.discordapp.com/attachments/1153655881687375932/1288850023551074364/channels4_profile.jpg?ex=66f6ae9f&is=66f55d1f&hm=1370a907d9f4717c21d3d30582adee67b04f25bcff9834d6f7442d0f1a915045&" alt="Mon image">
+        </div>
+        <ul>
+            {{with index . 0}}
+            <li><a href="/portfolio/{{.PortfolioId}}">Home</a></li>
+            <li><a href="/project/{{.PortfolioId}}">Project</a></li>
+            <li><a href="/modify/{{.PortfolioId}}">Modify</a></li>
+            {{end}}
+        </ul>
+    </nav>
+
+    <main>
+        <div class="project-container">
+
+            {{range .}}
+                <div class="project">
+                    <img src="{{.Images}}" class="project-image">
+                    <div class="project-content">
+                        <h2><strong>{{.Name}}</strong></h2>
+                        <p class="project-description">{{.Description}}</p>
+                        <p><strong>Langues utilisées : {{.Technos}}</strong></p>
+                    </div>
+
+                </div>
+                <!-- <hr class="project-separator"> -->
+            {{end}}
+
+        </div>
+    </main>
+
+</body>
+</html>

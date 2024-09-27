@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="/assets/css/admin.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+    </div>
+    <div class="over">
+        <button onclick="location.href='/home'">Home</button>
+        <h1 class="Liste">Liste des comptes</h1>
+        <br><br><br><br>
+        <div class="accountgrid-container">
+            <div class="accountgrid header">
+                <p><strong>ID:</strong></p>
+                <p><strong>Name:</strong></p>
+                <p><strong>Family Name:</strong></p>
+                <p><strong>Email:</strong></p>
+                <p><strong>Acces to Portfolio:</strong></p>
+                <p><strong>Delete Account:</strong></p>
+                <p><strong>CreationDate:</strong></p>
+            </div>
+
+            {{range .}}
+            <div class="accountgrid">
+                <p>{{.Id}}</p>
+                <p>{{.Name}}</p>
+                <p>{{.FamilyName}}</p>
+                <p>{{.Email}}</p>
+                <button onclick="location.href='/portfolio/{{.Id}}'" >Acces To Portfolio</button>
+                <button onclick="location.href='/delete/{{.Id}}'" >Delete Account</button>
+            <p>{{.CreationDate}}</p>
+            </div>
+            {{end}}
+        </div>
+    </div>
+    
+    <script src="/assets/js/settings.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon PortFolio</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-title">Portfolio Web</div>
+        <div class="nav-image">
+            <!-- <img src="..\screens\channels4_profile.jpg" alt="Mon image"> -->
+        </div>
+        <ul>
+            <li><a href="/portfolio/{{.AccountId}}">Home</a></li>
+            <li><a href="/project/{{.AccountId}}">Project</a></li>
+            <li><a href="/modify/{{.AccountId}}">Modify</a></li>
+        </ul>
+    </nav>
+    test1
+    {{.Id}}
+    test2
+    {{.Name}} {{.FamilyName}}
+    test3
+</body>
+</html>
