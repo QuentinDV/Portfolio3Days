@@ -1,3 +1,4 @@
+/* Style de base */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -24,7 +25,7 @@ nav {
     height: 70px;
     border-radius: 50%;
     object-fit: cover;
-}
+  }
 
 nav ul {
     list-style-type: none;
@@ -57,4 +58,25 @@ main {
 
 h1 {
     color: #333;
+}
+
+/* Style de la section de présentation */
+.presentation {
+    margin-top: 50px;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.presentation h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.presentation p {
+    font-size: 1.2em;
+    color: #555;
+    margin: 10px 0;
 }
